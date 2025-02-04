@@ -1,0 +1,20 @@
+{
+  "name": "kva-process",
+  "version": "1.0.0",
+  "description": "The Website Package for KVA Process Transformers Private Limited",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "react-scripts build",
+    "start": "nodemon index.js"
+  },
+  "author": "Indraprastha Design Co.",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "react-scripts": "^5.0.1",
+    "sitemap": "^7.1.2"
+  }
+}

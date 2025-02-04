@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Contact Us | KVA Process Transformers </title>
+
+		<%- include('partials/header'); -%>
+
+        
+			<!--
+			=====================================================
+				Google Map
+			=====================================================
+			-->
+			<!-- Google Map -->
+			<div class="google-map-two section-spacing"><div class="map-canvas"></div></div>
+
+
+			<!-- 
+			=============================================
+				Conatct us Section
+			============================================== 
+			-->
+			<div class="contact-us-section section-spacing mt-5 mb-5">
+				<div class="container">
+					<div class="theme-title-one">
+						<h2>GET IN TOUCH</h2>
+						<p>Feel free to contact us via the form below or on our social media, email or mobile numbers. We are always available for your questions.</p>
+					</div> <!-- /.theme-title-one -->
+					<div class="clearfix main-content no-gutters row">
+						<div class="col-lg-5 col-12"><div class="img-box"></div></div>
+						<div class="col-lg-7 col-12">
+							<div class="form-wrapper">
+								<form method="post" action="https://plakads.com/api/contact" class="theme-form-one">
+									<div class="row">
+										<div class="col-sm-6 col-12"><input type="text" placeholder="Name *" name="name" required></div>
+										<div class="col-sm-6 col-12"><input type="text" placeholder="Phone *" name="phone" required></div>
+										<div class="col-sm-6 col-12"><input type="email" placeholder="Email *" name="email" required></div>
+										<div class="col-sm-6 col-12"><input type="text" placeholder="Subject" name="Subject"></div>
+										<input type="hidden" name="recaptchaResponse" id="recaptchaResponse">
+										<input type="hidden" name="referrer" id="referrer">
+										<input type="hidden" name="screenRes" id="screenRes">
+										<input type="hidden" name="callURL" id="callURL">
+										<div class="col-12"><textarea placeholder="Message" name="message"></textarea></div>
+									</div> <!-- /.row -->
+									<button type="submit" class="theme-button-one">SEND MESSAGE</button>
+								</form>
+							</div> <!-- /.form-wrapper -->
+						</div> <!-- /.col- -->
+					</div> <!-- /.main-content -->
+				</div> <!-- /.container -->
+
+				<!--Contact Form Validation Markup -->
+			</div> <!-- /.contact-us-section -->
+
+
+
+
+        <%- include('partials/footer'); -%>

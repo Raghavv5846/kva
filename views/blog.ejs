@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Our Blog | KVA Process Transformers </title>
+
+		<%- include('partials/header'); -%>
+
+    	<!-- 
+			=============================================
+				Theme Inner Banner
+			============================================== 
+			-->
+			<div class="theme-inner-banner section-spacing">
+				<div class="overlay">
+					<div class="container">
+						<h2>Blog</h2>
+					</div> <!-- /.container -->
+				</div> <!-- /.overlay -->
+			</div> <!-- /.theme-inner-banner -->
+
+        
+			<!-- 
+			=============================================
+				Our Blog
+			============================================== 
+			-->
+			<div class="blog-inner-page section-spacing pt-5 pb-5">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-9 col-lg-8 col-12 our-blog">
+							<div class="post-wrapper">
+								<% const blogsPerPage = 4; %>
+								<% const totalBlogs = [
+									{
+										image: "images/blog/9.jpg",
+										date: "Feb 06, 2018",
+										title: "kVA Process Transformers Pvt. Ltd.: Leading Transformer Manufacturer in India",
+										content: "kVA Process Transformers Pvt. Ltd. is a leading transformer manufacturing company in India, specializing in high-efficiency and low-loss transformers. We offer a diverse range of transformers tailored to meet various industrial needs."
+									},
+									{
+										image: "images/blog/9.jpg",
+										date: "Feb 06, 2018",
+										title: "The Future of Smart Transformers in India's Power Sector",
+										content: "India's energy sector is undergoing a significant transformation, driven by the increasing demand for electricity and the integration of renewable energy sources."
+									},
+									{
+										image: "images/blog/9.jpg",
+										date: "Feb 06, 2018",
+										title: "How to Select the Right Transformer Industrial Applications",
+										content: "Transformers play a crucial role in industrial operations by ensuring efficient power distribution and voltage regulation. Selecting the appropriate transformer is crucial for ensuring efficient and reliable power distribution in industrial applications."
+									},
+									{
+										image: "images/blog/9.jpg",
+										date: "Feb 06, 2018",
+										title: "Best Practices for Transformer Maintenance: Ensuring Longevity and Efficiency",
+										content: "Transformers are vital components in power distribution systems, ensuring the efficient and reliable transmission of electricity. Regular maintenance is essential to prolong their lifespan, enhance performance, and prevent unexpected failures."
+									},
+									{
+										image: "images/blog/9.jpg",
+										date: "Feb 06, 2018",
+										title: "Understanding the Transformer Manufacturing Industry in India: Trends and Opportunities",
+										content: "The transformer manufacturing industry in India plays a pivotal role in the nation's power distribution and transmission infrastructure."
+									},
+									{
+										image: "images/blog/9.jpg",
+										date: "Feb 06, 2018",
+										title: "Understanding Furnace Transformers: Essential Components for Industrial Applications",
+										content: "Furnace transformers are specialized power transformers designed to meet the unique demands of industrial furnaces, particularly in metal smelting and steel production. "
+									},
+									{
+										image: "images/blog/9.jpg",
+										date: "Feb 06, 2018",
+										title: "Maximizing Furnace Transformer Efficiency: Comprehensive Maintenance Strategies",
+										content: "Furnace transformers are vital components in industries such as steel production and metal refining, where electric furnaces are essential. "
+									},
+									// ... Add all other blog entries here
+								]; %>
+
+								<% totalBlogs.forEach((blog, index) => { %>
+									<div class="single-blog blog-item" data-page="<%= Math.floor(index/blogsPerPage) + 1 %>" 
+										 style="display: <%= Math.floor(index/blogsPerPage) + 1 === 1 ? 'block' : 'none' %>">
+										<div class="image-box">
+											<img src="<%= blog.image %>" alt="">
+											<div class="overlay"><a href="#" class="date"><%= blog.date %></a></div>
+										</div>
+										<div class="post-meta">
+											<h5 class="title"><a href="blog-details.html?id=<%= index %>"><%= blog.title %></a></h5>
+											<p><%= blog.content %></p>
+											<a href="blog-details.html?id=<%= index %>" class="read-more">READ MORE</a>
+										</div>
+									</div>
+								<% }); %>
+							</div>
+
+							<div class="theme-pagination">
+								<ul>
+									<li class="active" data-page="1"><a href="javascript:void(0)">1</a></li>
+									<li data-page="2"><a href="javascript:void(0)">2</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- ===================== Blog Sidebar ==================== -->
+
+                        <%- include('partials/mainSidebar'); -%>
+
+					</div> <!-- /.row -->
+				</div> <!-- /.container -->
+			</div> <!-- /.blog-inner-page -->
+			
+
+
+
+        <%- include('partials/footer'); -%>
+
+		<!-- Add this script before the closing body tag -->
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const paginationItems = document.querySelectorAll('.theme-pagination li');
+				const blogItems = document.querySelectorAll('.blog-item');
+
+				paginationItems.forEach(item => {
+					item.addEventListener('click', function() {
+						const pageNum = this.getAttribute('data-page');
+						
+						// Update active class
+						paginationItems.forEach(pi => pi.classList.remove('active'));
+						this.classList.add('active');
+
+						// Show/hide blog items
+						blogItems.forEach(blog => {
+							if(blog.getAttribute('data-page') === pageNum) {
+								blog.style.display = 'block';
+							} else {
+								blog.style.display = 'none';
+							}
+						});
+					});
+				});
+			});
+		</script>

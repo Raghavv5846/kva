@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Gallery | KVA Process Transformers </title>
+
+		<%- include('partials/header'); -%>
+
+        			<!-- 
+			=============================================
+				Theme Inner Banner
+			============================================== 
+			-->
+			<div class="theme-inner-banner section-spacing">
+				<div class="overlay">
+					<div class="container">
+						<h2>Gallery</h2>
+					</div> <!-- /.container -->
+				</div> <!-- /.overlay -->
+			</div> <!-- /.theme-inner-banner -->
+
+
+			<!-- 
+			=============================================
+				Our Case
+			============================================== 
+			-->
+			<div class="our-case our-project section-spacing pt-5 pb-5">
+				<div class="container">
+					<div class="wrapper">
+						<div class="row">
+
+							<% imgData.forEach(function (post) { %>
+							<div class="col-lg-4 col-sm-6 col-12">
+								<div class="single-case-block">
+									<div class="image-wrapper">
+										<img loading="lazy" src="images/portfolio/<%= post.path %>" alt="<%= post.title %>">
+									</div>
+									<div class="hover-content">
+										<div class="text clearfix">
+											<div class="float-left">
+												<h5><a href="#"><%= post.title %></a></h5>
+												<p><%= post.subTitle %></p>
+											</div>
+										</div> <!-- /.text -->
+									</div> <!-- /.hover-content -->
+								</div> <!-- /.single-case-block -->
+							</div> <!-- /.col- -->
+							<% }); %>
+							
+						</div> <!-- /.row -->
+					</div> <!-- /.wrapper -->
+				</div> <!-- /.container -->
+			</div> <!-- /.our-case -->
+			
+
+
+
+
+
+
+        <%- include('partials/footer'); -%>

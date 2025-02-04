@@ -1,0 +1,42 @@
+<div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 col-12 theme-sidebar-one">
+    <div class="sidebar-box service-categories">
+        <h5 class="title">Our Products</h5>
+        <ul>
+            <li <% if (page_name.split(' ')[1] === '1') { %>class="active" <% } %>><a
+                        href="/products/sub-merged-arc-furnace-transformers">Submerged
+                        Arc Furnace Transformers</a></li>
+            <li <% if (page_name.split(' ')[1] === '2') { %>class="active" <% } %>><a
+                        href="/products/induction-melting-furnace-transformers">Induction Melting Furnace
+                        Transformers</a></li>
+            <li <% if (page_name.split(' ')[1] === '3') { %>class="active" <% } %>><a
+                        href="/products/power-transformers">Power Transformers</a></li>
+            <li <% if (page_name.split(' ')[1] === '4') { %>class="active" <% } %>><a
+                        href="/products/dry-type-transformers">Dry Type Transformers</a></li>
+            <li <% if (page_name.split(' ')[1] === '5') { %>class="active" <% } %>><a
+                        href="/products/oltc-fitted-transformer-asvr">OLTC Fitted Transformer ASVR</a>
+            </li>
+            <li <% if (page_name.split(' ')[1] === '6') { %>class="active" <% } %>><a
+                        href="/products/distribution-transformers">Distribution Transformers</a></li>
+            <li <% if (page_name.split(' ')[1] === '7') { %>class="active" <% } %>><a
+                        href="/products/earthing-transformers">Earthing Transformers</a></li>
+            <li <% if (page_name.split(' ')[1] === '8') { %>class="active" <% } %>><a
+                        href="/products/lt-panel-board">LT Panel Board</a></li>
+
+                        
+        </ul>
+    </div> <!-- /.service-categories -->
+    <div class="sidebar-box sidebar-contact">
+        <h5 class="title">Contact Form</h5>
+        <form method="post" action="https://plakads.com/api/contact">
+            <input type="text" placeholder="Full Name" name="name" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="tel" placeholder="Mobile No." name="phone" required>
+            <textarea placeholder="Message" name="message"></textarea>
+            <input type="hidden" name="recaptchaResponse" id="recaptchaResponse">
+            <input type="hidden" name="referrer" id="referrer">
+            <input type="hidden" name="screenRes" id="screenRes">
+            <input type="hidden" name="callURL" id="callURL">
+            <button type="submit" class="theme-button-one">SUBMIT</button>
+        </form>
+    </div> <!-- /.sidebar-contact -->
+</div> <!-- /.theme-sidebar-one -->
