@@ -241,21 +241,21 @@
   .theme-footer-two {padding-top: 20px;}
   .footer-logo{display: flex; justify-content: center;}
   #theme-main-banner .camera_caption h1 {font-size: 16px;line-height: 35px;padding: 5px 0 18px 0;}
+  body .theme-button-one{line-height: 33px;}
+  .imgLoaded{
+        visibility: visible;
+        height: 284px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0px;
+        position: absolute;
+        width: 376.88px !important;
+      }
+      .camera_fakehover{height: 79%;} 
+      .about-compnay{padding-top: 0;}
+      #theme-main-banner .camera_pag .camera_pag_ul{display: flex; gap: 8px; top: 72%; left: 450%;}
 }
-body .theme-button-one{line-height: 33px;}
-.imgLoaded{
-      visibility: visible;
-      height: 284px !important;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-      margin-top: 0px;
-      position: absolute;
-      width: 376.88px !important;
-    }
 
-.camera_fakehover{height: 79%;} 
-.about-compnay{padding-top: 0;}
-#theme-main-banner .camera_pag .camera_pag_ul{display: flex; gap: 8px; top: 72%; left: 450%;}
 
 @media (max-width: 650px) {
   #success, #error {
