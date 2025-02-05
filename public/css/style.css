@@ -479,7 +479,7 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
   right: 0;
   bottom: 0;
   background: #060996;
-  background: linear-gradient(339deg, rgba(80, 80, 155, 0.715) 20%, rgba(234, 217, 217, 0.45) 100%);
+  background: linear-gradient(1deg, rgb(54 54 58 / 55%) 20%, rgb(0 0 0 / 45%) 100%);
 }
 #theme-main-banner .main-container {position: relative;}
 #theme-main-banner .camera_caption {height: 100%;}
@@ -500,11 +500,11 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
   left: 0;
   padding: 0;
 }
-#theme-main-banner .camera_caption h1 {text-transform: uppercase;padding: 30px 0 35px 0; color: #060996;}
+#theme-main-banner .camera_caption h1 {text-transform: uppercase;padding: 30px 0 35px 0; color: #ffffff;}
 #theme-main-banner .camera_caption p {
   font-size: 40px;
   line-height: 35px;
-  color: #060996;
+  color: #ffffff;
   font-weight: 500;
 }
 #theme-main-banner .camera_caption .theme-button-one {background: #fff;}
@@ -2298,7 +2298,7 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 

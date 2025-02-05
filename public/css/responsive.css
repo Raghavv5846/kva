@@ -85,10 +85,12 @@
     display: block;
   }
   #mega-menu-holder>ul> li.has-submenu> a {padding-right: 52px;}
-  .section-spacing,.faq-section,.why-we-best,.error-page {margin-bottom: 80px;}
+  .section-spacing,.faq-section,.why-we-best,.error-page {margin-bottom: 40px;}
   .top-feature .main-content {padding: 30px 15px;}
-  .header-one .logo {width: 100%;text-align: center;margin-bottom: 20px;}
-  .header-one .top-header {padding-top: 25px;}
+  .headercontainer{flex-wrap: wrap-reverse; justify-content: center !important;}
+  .comlogos{display: flex !important; margin-bottom: 20px;}
+  .header-one .logo {width: 50%;text-align: center;}
+  .header-one .top-header {padding-top: 0px;}
   .header-one .top-header .address-wrapper .address .icon {font-size: 30px;}
   .header-one .top-header .address-wrapper .address {padding: 0 20px 0 45px;margin-right: 0;}
   .header-one .theme-menu-wrapper .bg-wrapper {padding-left:0;}
@@ -101,13 +103,13 @@
   #mega-menu-holder>ul> li.active > .sub-toggle, #mega-menu-holder>ul> li:hover > .sub-toggle {color: #001a57;}
   .about-compnay img {display: none;}
   .service-style-one .contact-text {padding-top: 15px;}
-  .service-style-one .contact-text h4 {font-size: 22px;}
+  .service-style-one .contact-text h4 {font-size: 20px;}
   .testimonial-section .wrapper,.cunter-wrapper {width: 100%;}
   .testimonial-section .overlay {padding: 75px 0;}
   .theme-counter {padding: 0;}
   .consultation-form .img-box {height: 250px;}
   .consultation-form .form-wrapper {height: auto;padding: 40px 20px;}
-  .theme-footer-one .top-footer [class*="col-"],.theme-footer-two .top-footer [class*="col-"] {margin-bottom: 60px;}
+  .theme-footer-one .top-footer [class*="col-"],.theme-footer-two .top-footer [class*="col-"] {margin-bottom: 40px;}
   .theme-footer-one .top-footer {padding: 60px 0 0 0;}
   .header-one .theme-menu-wrapper {margin-bottom: -31px;}
   .theme-menu-wrapper .right-widget .cart-icon a span {top:16px;}
@@ -128,10 +130,12 @@
   .about-compnay-two .quote-form {margin-top: 40px;}
   .faq-section,.faq-section .overlay,.why-we-best,.why-we-best .overlay {height: auto;}
   .faq-section .overlay,.why-we-best .overlay {padding: 60px 0;}
+  .faq-item .arrow{font-size: 25px !important;}
+  #theme-main-banner .container{display: flex; flex-direction: column; justify-content: center; position: absolute; text-align: center;} 
   .faq-section .wrapper .img-box,.why-we-best .wrapper .img-box,.contact-us-section .img-box {height: 250px;border-radius: 5px 5px 0 0;}
   .faq-section .wrapper .faq-content,.why-we-best .wrapper .best-list-item,.contact-us-section .form-wrapper {border-radius: 0 0 5px 5px;}
   .short-banner .overlay h2 {width: 100%;}
-  .theme-footer-two {padding-top: 60px;}
+  .theme-footer-two {padding-top: 40px;}
   .theme-footer-two .bottom-footer,.theme-footer-two .top-footer .title {margin-top: 0;}
   .theme-inner-banner .overlay {padding: 80px 0 60px 0;}
   .about-compnay-two .left-img {margin-top:20px;width: 100%;}
@@ -186,25 +190,25 @@
   .our-case .single-case-block .hover-content .text {padding: 0;}
   #theme-main-banner {height: 500px !important;}
   #theme-main-banner .camera_caption p {font-size: 20px;}
-  #theme-main-banner .camera_caption h1 {font-size: 50px;line-height: 60px;}
+  #theme-main-banner .camera_caption h1 {font-size: 30px;line-height: 60px;}
 }
 /*(min-width: 576px) and (max-width: 767px)*/
 
 @media (max-width: 575px) {
   .theme-inner-banner .overlay h2 {font-size: 35px;}
-  .header-one .theme-menu-wrapper {background: #000f32;}
+  .header-one .theme-menu-wrapper {background: #060996;}
   .header-one .menu-collapser {margin-left: 0;}
   .theme-menu-wrapper .right-widget .search-option .dropdown-toggle {text-align: right;width: 25px;}
   .theme-menu-wrapper .right-widget .cart-icon {width: 42px;margin-left: 10px;}
   .theme-title-one h2 {font-size: 30px;padding-bottom: 18px;}
-  .section-spacing {margin-bottom: 60px;}
+  .section-spacing {margin-bottom: 0px;}
   .about-compnay .mission-goal li h4 {font-size: 18px;}
   .about-compnay .mission-goal li .icon {font-size: 35px;}
   .feature-banner .opacity h2 {font-size: 35px;line-height: 45px;}
-  .feature-banner .opacity,.testimonial-section .overlay,.theme-counter .bg {padding: 60px 0;}
+  .feature-banner .opacity,.testimonial-section .overlay,.theme-counter .bg {padding: 20px 0;}
   .service-style-one .contact-text h5:before {display: none;}
   .testimonial-section .wrapper p {font-size: 18px;line-height: 27px;font-weight: normal;}
-  .theme-counter h2 {font-size: 38px;}
+  .theme-counter h2 {font-size: 25px;}
   .single-counter-box .number {font-size: 25px;}
   .single-counter-box .number .timer {font-size: 50px;}
   .single-counter-box p {margin-top: -5px;}
@@ -228,11 +232,30 @@
   .shop-details .product-details .product-tab {min-height: 290px;}
   .shop-details .product-details .product-info .title {font-size: 22px;}
   .blog-details .share-option ul {width: 100%;}
-  #theme-main-banner {height: 400px !important;}
+  #theme-main-banner {height: 360px !important;}
+  .product-faq{padding: 30px 0 !important;}
+  .cunter-row{display: grid; grid-template-columns: auto auto;}
+  .service-style-one .contact-text h5{font-size: 18px;}
+  body .theme-button-one{padding: 0 10px; font-size: 9px;}
   #theme-main-banner .camera_caption p {font-size: 18px;}
-  #theme-main-banner .camera_caption h1 {font-size: 35px;line-height: 46px;padding: 12px 0 18px 0;}
+  .theme-footer-two {padding-top: 20px;}
+  .footer-logo{display: flex; justify-content: center;}
+  #theme-main-banner .camera_caption h1 {font-size: 16px;line-height: 35px;padding: 5px 0 18px 0;}
 }
-/*(max-width: 575px)*/
+body .theme-button-one{line-height: 33px;}
+.imgLoaded{
+      visibility: visible;
+      height: 284px !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin-top: 0px;
+      position: absolute;
+      width: 376.88px !important;
+    }
+
+.camera_fakehover{height: 79%;} 
+.about-compnay{padding-top: 0;}
+#theme-main-banner .camera_pag .camera_pag_ul{display: flex; gap: 8px; top: 72%; left: 450%;}
 
 @media (max-width: 650px) {
   #success, #error {
