@@ -109,6 +109,60 @@
 	    z-index: 1 !important;
 	    transform: translateZ(0);
 	  }
+
+	  /* Add these new styles for mobile menu */
+	  @media (max-width: 991px) {
+	    #mega-menu-holder {
+	      position: fixed;
+	      top: 0;
+	      left: 0;
+	      width: 100%;
+	      height: 100vh;
+	      /* background: white; */
+	      z-index: 100002;
+	      padding: 20px;
+	      overflow-y: auto;
+	    }
+
+	    #mega-menu-holder ul.clearfix {
+	      margin-top: 20px;
+	    }
+
+	    #mega-menu-holder ul.clearfix > li {
+	      display: block;
+	      /* margin: 15px 0; */
+	    }
+
+	    .mobile-menu-toggle {
+	      position: relative;
+	      /* z-index: 100003; */
+	    }
+
+	    /* Style for dropdown in mobile view */
+	    #mega-menu-holder ul li ul.dropdown {
+	      position: static;
+	      box-shadow: none;
+	      padding-left: 20px;
+	    }
+
+	    /* Add styles for close button */
+	    .mobile-menu-close {
+	      position: absolute;
+	      top: 20px;
+	      right: 20px;
+	      background: none;
+	      border: none;
+	      font-size: 24px;
+	      color: #ffffff;
+	      cursor: pointer;
+	      z-index: 100004;
+	      display: none;
+	    }
+
+	    #mega-menu-holder.show .mobile-menu-close {
+	      display: block;
+	    }
+	  }
 	</style>
 			
 	</head>
@@ -133,10 +187,10 @@
 				<div class="top-header">
 					<div class="container headercontainer" style="display: flex; justify-content: space-between; align-items: center;">
 						<div class="address-wrapper  comlogos" style="display: inline-grid; grid-template-columns: auto auto; align-items: center; gap: 15px;">
-							<div><img src="/images/logo/ISI-Mark-logo.png" width="70px" alt=""></div>
-							<div style="display: flex; justify-content: center;"><img src="/images/logo/ERDA.png" width="54px" alt=""></div>
-							<div><img src="/images/logo/Iso-logo.png" width="70px" alt=""></div>
-							<div><img src="/images/logo/IAF-Logo.png" width="90px" alt=""></div>
+							<div class="comlogos-img-1"><img src="/images/logo/ISI-Mark-logo.png" width="70px" alt=""></div>
+							<div class="comlogos-img-2" style="display: flex; justify-content: center;"><img src="/images/logo/ERDA.png" width="54px" alt=""></div>
+							<div class="comlogos-img-3"><img src="/images/logo/Iso-logo.png" width="70px" alt=""></div>
+							<div class="comlogos-img-4"><img src="/images/logo/IAF-Logo.png" width="90px" alt=""></div>
 						</div> <!-- /.address-wrapper -->
 
 						<div class="logo text-center" style="padding-top: 30px;"><a href="/"><img src="/images/logo/kva-website-logo.png" width="270px" alt="kVA Process Transformer Logo"></a></div>
@@ -165,6 +219,9 @@
 					   				<i class="fa-solid fa-bars"></i>
 					   			</button>
 					   			<nav id="mega-menu-holder" class="clearfix">
+								   <button class="mobile-menu-close">
+								   	<i class="fa-solid fa-xmark"></i>
+								   </button>
 								   <ul class="clearfix">
 									    <li <% if (page_name === 'home') { %>class="active" <% } %>><a href="/">Home</a>
 									    </li>
@@ -212,30 +269,56 @@
 			document.addEventListener('DOMContentLoaded', function() {
 				const menuToggle = document.querySelector('.mobile-menu-toggle');
 				const menuHolder = document.querySelector('#mega-menu-holder');
+				const closeButton = document.querySelector('.mobile-menu-close');
 				
 				// Add initial display style for mobile
-				if (window.innerWidth < 992) { // lg breakpoint
+				if (window.innerWidth < 992) {
 					menuHolder.style.display = 'none';
 				}
 				
+				function closeMenu() {
+					menuHolder.style.display = 'none';
+					menuHolder.classList.remove('show');
+					document.body.style.overflow = '';
+					const icon = menuToggle.querySelector('i');
+					icon.classList.remove('fa-xmark');
+					icon.classList.add('fa-bars');
+				}
+				
 				menuToggle.addEventListener('click', function(e) {
-					e.stopPropagation(); // Prevent event bubbling
-					menuHolder.style.display = menuHolder.style.display === 'none' ? 'block' : 'none';
+					e.stopPropagation();
+					const isMenuVisible = menuHolder.style.display === 'block';
+					menuHolder.style.display = isMenuVisible ? 'none' : 'block';
+					menuHolder.classList.toggle('show');
+					document.body.style.overflow = isMenuVisible ? '' : 'hidden';
 					
 					const icon = this.querySelector('i');
 					icon.classList.toggle('fa-bars');
 					icon.classList.toggle('fa-xmark');
 				});
 				
+				closeButton.addEventListener('click', function(e) {
+					e.stopPropagation();
+					closeMenu();
+				});
+				
 				// Close menu when clicking outside
 				document.addEventListener('click', function(e) {
 					if (!menuHolder.contains(e.target) && !menuToggle.contains(e.target)) {
 						if (window.innerWidth < 992 && menuHolder.style.display === 'block') {
-							menuHolder.style.display = 'none';
-							const icon = menuToggle.querySelector('i');
-							icon.classList.remove('fa-xmark');
-							icon.classList.add('fa-bars');
+							closeMenu();
 						}
+					}
+				});
+
+				// Handle window resize
+				window.addEventListener('resize', function() {
+					if (window.innerWidth >= 992) {
+						menuHolder.style.display = 'block';
+						document.body.style.overflow = '';
+					} else {
+						menuHolder.style.display = 'none';
+						menuHolder.classList.remove('show');
 					}
 				});
 			});

@@ -32,49 +32,101 @@
 								<% const blogsPerPage = 4; %>
 								<% const totalBlogs = [
 									{
-										image: "images/blog/9.jpg",
+										image: "images/home/blog-1.1.png",
 										date: "Feb 06, 2018",
 										title: "kVA Process Transformers Pvt. Ltd.: Leading Transformer Manufacturer in India",
-										content: "kVA Process Transformers Pvt. Ltd. is a leading transformer manufacturing company in India, specializing in high-efficiency and low-loss transformers. We offer a diverse range of transformers tailored to meet various industrial needs."
+										content: "kVA Process Transformers Pvt. Ltd. is a leading transformer manufacturing company in India, specializing in high-efficiency and low-loss transformers."
 									},
 									{
-										image: "images/blog/9.jpg",
+										image: "images/home/blog-2.1.png",
 										date: "Feb 06, 2018",
 										title: "The Future of Smart Transformers in India's Power Sector",
-										content: "India's energy sector is undergoing a significant transformation, driven by the increasing demand for electricity and the integration of renewable energy sources."
+										content: "India's energy sector is undergoing a significant transformation, driven by the increasing demand for electricity."
 									},
 									{
-										image: "images/blog/9.jpg",
+										image: "images/home/blog-3.1.png",
 										date: "Feb 06, 2018",
 										title: "How to Select the Right Transformer Industrial Applications",
-										content: "Transformers play a crucial role in industrial operations by ensuring efficient power distribution and voltage regulation. Selecting the appropriate transformer is crucial for ensuring efficient and reliable power distribution in industrial applications."
+										content: "Transformers play a crucial role in industrial operations by ensuring efficient power distribution."
 									},
 									{
-										image: "images/blog/9.jpg",
+										image: "images/home/blog-4.1.png",
 										date: "Feb 06, 2018",
 										title: "Best Practices for Transformer Maintenance: Ensuring Longevity and Efficiency",
 										content: "Transformers are vital components in power distribution systems, ensuring the efficient and reliable transmission of electricity. Regular maintenance is essential to prolong their lifespan, enhance performance, and prevent unexpected failures."
 									},
 									{
-										image: "images/blog/9.jpg",
+										image: "images/home/blog-5.1.png",
 										date: "Feb 06, 2018",
 										title: "Understanding the Transformer Manufacturing Industry in India: Trends and Opportunities",
 										content: "The transformer manufacturing industry in India plays a pivotal role in the nation's power distribution and transmission infrastructure."
 									},
 									{
-										image: "images/blog/9.jpg",
+										image: "images/home/blog-6.1.png",
 										date: "Feb 06, 2018",
 										title: "Understanding Furnace Transformers: Essential Components for Industrial Applications",
 										content: "Furnace transformers are specialized power transformers designed to meet the unique demands of industrial furnaces, particularly in metal smelting and steel production. "
 									},
 									{
-										image: "images/blog/9.jpg",
+										image: "images/home/blog-7.1.png",
 										date: "Feb 06, 2018",
 										title: "Maximizing Furnace Transformer Efficiency: Comprehensive Maintenance Strategies",
 										content: "Furnace transformers are vital components in industries such as steel production and metal refining, where electric furnaces are essential. "
 									},
 									// ... Add all other blog entries here
 								]; %>
+
+								<!-- Modal for displaying full image -->
+								<div id="imageModal" class="modal" style="display:none;">
+									<span class="close" onclick="closeModal()">&times;</span>
+									<img class="modal-content" id="modalImage">
+								</div>
+
+								<style>
+									.modal {
+										display: none; /* Hidden by default */
+										position: fixed; /* Stay in place */
+										z-index: 1000; /* Sit on top */
+										left: 0;
+										top: 0;
+										width: 100%; /* Full width */
+										height: 100%; /* Full height */
+										overflow: auto; /* Enable scroll if needed */
+										background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+										backdrop-filter: blur(5px); /* Blur effect */
+									}
+
+									.modal-content {
+										margin: auto;
+										display: block;
+										max-width: 90%; /* Responsive width */
+										max-height: 90%; /* Responsive height */
+										position: relative; /* Position relative for centering */
+										top: 60%; /* Center vertically */
+										transform: translateY(-50%); /* Adjust for vertical centering */
+									}
+
+									.close {
+										position: absolute;
+										top: 90px;
+										right: 30px;
+										color: white;
+										font-size: 40px;
+										font-weight: bold;
+										cursor: pointer;
+									}
+
+									.close:hover,
+									.close:focus {
+										color: #bbb;
+										text-decoration: none;
+										cursor: pointer;
+									}
+
+									.image-box img {
+										display: none; /* Hide images in blog items */
+									}
+								</style>
 
 								<% totalBlogs.forEach((blog, index) => { %>
 									<div class="single-blog blog-item" data-page="<%= Math.floor(index/blogsPerPage) + 1 %>" 
@@ -84,9 +136,9 @@
 											<div class="overlay"><a href="#" class="date"><%= blog.date %></a></div>
 										</div>
 										<div class="post-meta">
-											<h5 class="title"><a href="blog-details.html?id=<%= index %>"><%= blog.title %></a></h5>
+											<h5 class="title" style="cursor: pointer;"><a onclick="openModal('<%= blog.image %>')"><%= blog.title %></a></h5>
 											<p><%= blog.content %></p>
-											<a href="blog-details.html?id=<%= index %>" class="read-more">READ MORE</a>
+											<a href="javascript:void(0)" class="read-more" onclick="openModal('<%= blog.image %>')">READ MORE</a>
 										</div>
 									</div>
 								<% }); %>
@@ -114,6 +166,18 @@
 
 		<!-- Add this script before the closing body tag -->
 		<script>
+			function openModal(imageSrc) {
+				const modal = document.getElementById("imageModal");
+				const modalImage = document.getElementById("modalImage");
+				modal.style.display = "block";
+				modalImage.src = imageSrc;
+			}
+
+			function closeModal() {
+				const modal = document.getElementById("imageModal");
+				modal.style.display = "none";
+			}
+
 			document.addEventListener('DOMContentLoaded', function() {
 				const paginationItems = document.querySelectorAll('.theme-pagination li');
 				const blogItems = document.querySelectorAll('.blog-item');

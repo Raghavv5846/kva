@@ -166,7 +166,6 @@
  body a {text-decoration: none;color: #232323; display: inline-block;font-family: 'Nunito Sans', sans-serif;}
  a:hover,a:focus,a:visited {text-decoration: none; outline: none;}
  img {max-width: 100%; display: block;}
- button {border:none;outline: none;box-shadow: none;display: block; padding: 0;cursor: pointer;}
  button:focus {outline: none;}
  input,textarea {outline: none; box-shadow: none;transition: all 0.3s ease-in-out;}
 /* .section-spacing {margin-bottom: 120px;} */
@@ -211,7 +210,7 @@
   background: #060996;
 }
 #theme-main-banner .camera_pag .camera_pag_ul li.cameracurrent > span{
-  background-color: #060996;
+  background-color: #ffffff;
 }
 
 .header-one .top-header .address-wrapper .quotes a,.theme-pagination ul li a:hover,.theme-pagination ul li.active a,.blog-sidebar .sidebar-tags ul li.active a,
@@ -478,8 +477,8 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
   left:0;
   right: 0;
   bottom: 0;
-  background: #060996;
-  background: linear-gradient(1deg, rgb(54 54 58 / 55%) 20%, rgb(0 0 0 / 45%) 100%);
+  /* background: #060996; */
+  background: linear-gradient(rgb(71 71 74 / 25%) 20%, rgb(0 0 0 / 30%) 100%);
 }
 #theme-main-banner .main-container {position: relative;}
 #theme-main-banner .camera_caption {height: 100%;}
@@ -531,7 +530,7 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
   border-radius: 50%;
   border-width: 1px;
   background: transparent;
-  border: 1px solid #060996;
+  border: 1px solid #fefefe;
 }
 #theme-main-banner .camera_pag .camera_pag_ul li span {
   height: 100%;
@@ -1409,7 +1408,7 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
   margin-bottom: 270px;
 }
 .why-we-best .overlay {
-  background: rgba(0,26,87,0.9);
+  background: #060896ba;
   padding: 95px 0 0 0;
   height: 570px;
 }
@@ -2220,7 +2219,7 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
     
     #mega-menu-holder {
         display: none;
-        top: 60% !important;
+        top: 0% !important;
         background: #060996;  /* Match the header background */
     }
     
@@ -2247,7 +2246,7 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
     }
 
     #mega-menu-holder ul.clearfix li a {
-        color: #000000;  /* Make menu text visible */
+        color: #ffffff;  /* Make menu text visible */
         display: block;
         padding: 5px 0;
     }
@@ -2255,14 +2254,14 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
     /* Style for dropdown menus */
     #mega-menu-holder ul.clearfix li ul.dropdown {
         position: static;
-        display: none;
+        /* display: none; */
         background: rgba(255, 255, 255, 0.1);
         padding: 10px 0;
         margin-top: 10px;
     }
 
     #mega-menu-holder ul.clearfix li:hover ul.dropdown {
-        display: block;
+        display: block !important;
     }
 
     #mega-menu-holder ul.clearfix li ul.dropdown li a {
