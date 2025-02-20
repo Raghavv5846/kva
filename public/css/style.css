@@ -336,7 +336,7 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
 .theme-menu-wrapper .right-widget ul {padding-right: 25px;}
 .theme-menu-wrapper .right-widget .social-icon li a {
   font-size: 15px;
-  color: #ccd1dd;
+  color: #ffffff;
   margin: 0 7px;
 }
 .theme-menu-wrapper .right-widget .social-icon li a:hover {color: #fff;}
@@ -499,12 +499,16 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
   left: 0;
   padding: 0;
 }
-#theme-main-banner .camera_caption h1 {text-transform: uppercase;padding: 30px 0 35px 0; color: #ffffff;}
+#theme-main-banner .camera_caption h1 {text-transform: uppercase;padding: 30px 0 35px 0; color: #ffffff; font-size: 40px; line-height: 50px; }
 #theme-main-banner .camera_caption p {
   font-size: 40px;
   line-height: 35px;
   color: #ffffff;
   font-weight: 500;
+  background: #060996b0;
+  padding: 5px;
+  width: fit-content;
+  border-radius: 5px;
 }
 #theme-main-banner .camera_caption .theme-button-one {background: #fff;}
 #theme-main-banner .camera_caption .theme-button-one:hover {color: #fff;}
@@ -574,9 +578,6 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
 .top-feature.fix-border .main-content {border-top: 4px solid transparent;border-bottom: none;}
 .top-feature.fix-border .main-content:hover {border-top-color: #060996;}
 /*------------------ About Company -----------------*/
-.about-compnay{
-  padding-top: 6%;
-}
 .about-compnay img {border-radius: 5px;}
 .about-compnay .mission-goal {
   border-top:1px solid #dcdcdc;
@@ -650,15 +651,13 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
 .service-style-one .wrapper {margin-top: 50px;}
 .service-style-one .contact-text {text-align: center;padding-top:35px; padding-bottom: 35px;}
 .service-style-one .contact-text h4 {font-weight: normal;margin-bottom: 10px;}
-.service-style-one .contact-text h5 {font-weight: normal;display: inline-block;position: relative;}
-.service-style-one .contact-text h5:before {
-  content: '';
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  bottom: 1px;
-  left:0;
+.service-style-one .contact-text h5 {
+  display: flex;
+  gap: 31px;
+  justify-content: center;
+  text-decoration: underline;
 }
+
 
 .single-service:hover img{
   animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
@@ -1387,8 +1386,8 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
 .google-map-one {height: 300px;}
 /*---------------------- Theme Inner Banner -----------------*/
 .theme-inner-banner {
-  background: url(../images/home/behind-menu-pages-big.jpg) no-repeat center center;
-  background-attachment: fixed;
+  background: url(../images/home/electric-substation-asuncion-paraguay-night.jpg) no-repeat center center;
+  /* background-attachment: fixed; */
   background-size: cover;
   background-color: #707d9e;
 }
@@ -1791,7 +1790,7 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
 }
 .contact-us-section .img-box {
-  background: url(../images/home/22.webp) no-repeat center;
+  background: url(../images/home/contactus-edited-transformer-image.png) no-repeat center;
   background-size: cover;
   height: 500px;
   border-radius: 5px 0 0 5px;

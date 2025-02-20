@@ -68,7 +68,10 @@
 	  #mega-menu-holder {
 	    position: relative;
 	    z-index: 9999;
+	    
 	  }
+
+	  
 
 	  #mega-menu-holder ul.dropdown {
 	    z-index: 9999;
@@ -122,10 +125,18 @@
 	      z-index: 100002;
 	      padding: 20px;
 	      overflow-y: auto;
+		  transition: transform 0.3s ease;
+	    transform: translateX(-100%);
+	    display: none;
 	    }
+		#mega-menu-holder.show {
+	    transform: translateX(0);
+	    display: block;
+	  }
 
 	    #mega-menu-holder ul.clearfix {
 	      margin-top: 20px;
+		  text-align: center;
 	    }
 
 	    #mega-menu-holder ul.clearfix > li {
@@ -200,9 +211,8 @@
 								<li class="address">
 									<!-- <i class="icon fa-solid fa-envelope"></i> -->
 									<i class="icon fa-solid fa-phone"></i>
-									<!-- <h6>Mail us:</h6> -->
-									<p style="font-weight: 600; font-size: 25px;">+91 9831823173</p>
-									<p style="font-weight: 600; font-size: 25px;">+91 9830252113</p>
+									<p style="font-weight: 600; font-size: 25px;">+91 98318 23173</p>
+									<p style="font-weight: 600; font-size: 25px;">+91 98302 52113</p>
 								</li>
 								<!-- <li class="quotes"><a href="/contact">CONTACT</a></li> -->
 							</ul>
@@ -230,11 +240,13 @@
 									    <li <% if (page_name.split(' ')[0] === 'product') { %>class="active" <% } %>><a href="#">Products</a>
 									    	<ul class="dropdown">
 									    		<li><a href="/products/sub-merged-arc-furnace-transformers">Submerged Arc Furnace Transformers</a></li>
+									    		<li><a href="/products/lrf-transformer">LRF Transformer</a></li>
 									    		<li><a href="/products/induction-melting-furnace-transformers">Induction Melting Furnace Transformers</a></li>
 									    		<li><a href="/products/power-transformers">Power Transformers</a></li>
 									    		<li><a href="/products/dry-type-transformers">Dry Type Transformers</a></li>
 									    		<li><a href="/products/oltc-fitted-transformer-asvr">OLTC Fitted Transformer ASVR</a></li>
 									    		<li><a href="/products/distribution-transformers">Distribution Transformers</a></li>
+									    		<li><a href="/products/solar-transformer">Solar Transformer</a></li>
 												<li><a href="/products/earthing-transformers">Earthing Transformers</a></li>
 												<li><a href="/products/lt-panel-board">LT Panel Board</a></li>
 									       </ul>
@@ -277,7 +289,6 @@
 				}
 				
 				function closeMenu() {
-					menuHolder.style.display = 'none';
 					menuHolder.classList.remove('show');
 					document.body.style.overflow = '';
 					const icon = menuToggle.querySelector('i');
@@ -287,14 +298,18 @@
 				
 				menuToggle.addEventListener('click', function(e) {
 					e.stopPropagation();
-					const isMenuVisible = menuHolder.style.display === 'block';
-					menuHolder.style.display = isMenuVisible ? 'none' : 'block';
-					menuHolder.classList.toggle('show');
-					document.body.style.overflow = isMenuVisible ? '' : 'hidden';
-					
-					const icon = this.querySelector('i');
-					icon.classList.toggle('fa-bars');
-					icon.classList.toggle('fa-xmark');
+					const isMenuVisible = menuHolder.classList.contains('show');
+					if (isMenuVisible) {
+						closeMenu();
+					} else {
+						menuHolder.style.display = 'block';
+						menuHolder.classList.add('show');
+						document.body.style.overflow = 'hidden';
+						
+						const icon = this.querySelector('i');
+						icon.classList.toggle('fa-bars');
+						icon.classList.toggle('fa-xmark');
+					}
 				});
 				
 				closeButton.addEventListener('click', function(e) {
@@ -305,7 +320,7 @@
 				// Close menu when clicking outside
 				document.addEventListener('click', function(e) {
 					if (!menuHolder.contains(e.target) && !menuToggle.contains(e.target)) {
-						if (window.innerWidth < 992 && menuHolder.style.display === 'block') {
+						if (window.innerWidth < 992 && menuHolder.classList.contains('show')) {
 							closeMenu();
 						}
 					}
