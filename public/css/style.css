@@ -133,6 +133,7 @@
   opacity: 1;
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
 }
+
 /*______________________ Global stlye ___________________*/
 
  @font-face {
@@ -162,7 +163,7 @@
  h6 {font-size: 20px; font-weight: normal;}
  p {line-height: 27px;}
  ul {list-style-type: none;}
- .productOrder {list-style-type: circle;}
+ /* .productOrder {list-style-type: circle;} */
  body a {text-decoration: none;color: #232323; display: inline-block;font-family: 'Nunito Sans', sans-serif;}
  a:hover,a:focus,a:visited {text-decoration: none; outline: none;}
  img {max-width: 100%; display: block;}
@@ -502,7 +503,7 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
 #theme-main-banner .camera_caption h1 {text-transform: uppercase;padding: 30px 0 35px 0; color: #ffffff; font-size: 40px; line-height: 50px; }
 #theme-main-banner .camera_caption p {
   font-size: 40px;
-  line-height: 35px;
+  /* line-height: 35px; */
   color: #ffffff;
   font-weight: 500;
   background: #060996b0;
@@ -1542,7 +1543,7 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
 .service-details .service-content .cover-img {border-radius: 5px;margin-bottom: 25px;}
 .service-details .service-content .main-title {font-size: 30px;margin-bottom: 15px;}
 .service-details .service-content p {padding-bottom: 25px;}
-.service-details .service-content .sub-heading {font-weight: normal;margin-bottom: 15px;}
+.service-details .service-content .sub-heading {margin-bottom: 15px;}
 .service-details .service-content .presentation-section {padding: 30px 0 55px 0;}
 .service-details .service-content .presentation-section .best-list-item li {
   position: relative;
@@ -2253,15 +2254,14 @@ body .theme-button-one:hover {background:#ffffff; color: #060996; outline: 1px s
     /* Style for dropdown menus */
     #mega-menu-holder ul.clearfix li ul.dropdown {
         position: static;
-        /* display: none; */
         background: rgba(255, 255, 255, 0.1);
         padding: 10px 0;
         margin-top: 10px;
     }
 
-    #mega-menu-holder ul.clearfix li:hover ul.dropdown {
+    /* #mega-menu-holder ul.clearfix li:hover ul.dropdown {
         display: block !important;
-    }
+    } */
 
     #mega-menu-holder ul.clearfix li ul.dropdown li a {
         /* padding: 5px 20px; */

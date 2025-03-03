@@ -3,28 +3,36 @@ const router = express.Router();
 const Blog = require('../models/blog');
 
 router.get('/', (req, res) => {
-    // Sample blog data - replace this with your actual blog data source
-    const blogs = [
-        {
-            image: '/images/blog/1.jpg',
-            date: '25 May 2024',
-            title: 'Sample Blog Title 1',
-            description: 'This is a sample blog description 1'
-        },
-        {
-            image: '/images/blog/2.jpg',
-            date: '26 May 2024',
-            title: 'Sample Blog Title 2',
-            description: 'This is a sample blog description 2'
-        },
-        // Add more blog objects as needed
-    ];
-
-    res.render('blog', { blogs: blogs , page_name: 'blog' });
+    res.render('blog', { page_name: 'blog' });
 });
 
-router.get('/:slug/', function (req, res) {
-    res.render('blogOne',{page_name: 'blog'});
+// Add individual blog routes
+router.get('/blogOne', (req, res) => {
+    res.render('blogOne', { page_name: 'blog' });
+});
+
+router.get('/blogTow', (req, res) => {
+    res.render('blogTow', { page_name: 'blog' });
+});
+
+router.get('/blogThree', (req, res) => {
+    res.render('blogThree', { page_name: 'blog' });
+});
+
+router.get('/blogFour', (req, res) => {
+    res.render('blogFour', { page_name: 'blog' });
+});
+
+router.get('/blogFive', (req, res) => {
+    res.render('blogFive', { page_name: 'blog' });
+});
+
+router.get('/blogSix', (req, res) => {
+    res.render('blogSix', { page_name: 'blog' });
+});
+
+router.get('/blogSeven', (req, res) => {
+    res.render('blogSeven', { page_name: 'blog' });
 });
 
 module.exports = router;

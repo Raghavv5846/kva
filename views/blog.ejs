@@ -1,205 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Our Blog | KVA Process Transformers </title>
 
-		<%- include('partials/header'); -%>
+<head>
+	<title>Our Blog | KVA Process Transformers </title>
 
-    	<!-- 
+	<%- include('partials/header'); -%>
+
+		<!-- 
 			=============================================
 				Theme Inner Banner
 			============================================== 
 			-->
-			<div class="theme-inner-banner section-spacing">
-				<div class="overlay">
-					<div class="container">
-						<h2>Blog</h2>
-					</div> <!-- /.container -->
-				</div> <!-- /.overlay -->
-			</div> <!-- /.theme-inner-banner -->
+		<div class="theme-inner-banner section-spacing">
+			<div class="overlay">
+				<div class="container">
+					<h2>Blog</h2>
+				</div> <!-- /.container -->
+			</div> <!-- /.overlay -->
+		</div> <!-- /.theme-inner-banner -->
 
-        
-			<!-- 
+
+		<!-- 
 			=============================================
 				Our Blog
 			============================================== 
 			-->
-			<div class="blog-inner-page section-spacing pt-5 pb-5">
-				<div class="container">
-					<div class="row">
-						<div class="col-xl-9 col-lg-8 col-12 our-blog">
-							<div class="post-wrapper">
-								<% const blogsPerPage = 4; %>
-								<% const totalBlogs = [
-									{
-										image: "images/home/blog-1.1.png",
-										date: "Feb 06, 2024",
-										title: "kVA Process Transformers Pvt. Ltd.: Leading Transformer Manufacturer in India",
-										content: "kVA Process Transformers Pvt. Ltd. is a leading transformer manufacturing company in India, specializing in high-efficiency and low-loss transformers. With state-of-the-art facilities and decades of expertise, we deliver innovative solutions for diverse industrial needs.",
-										path: "/blog/blogOne"
-									},
-									{
-										image: "images/home/blog-2.1.png",
-										date: "Feb 10, 2024",
-										title: "The Future of Smart Transformers in India's Power Sector",
-										content: "India's energy sector is undergoing a significant transformation, driven by the increasing demand for electricity and the integration of renewable energy sources. Smart transformers are playing a crucial role in this evolution.",
-										path: "/blog/blogTow"
-									},
-									{
-										image: "images/home/blog-3.1.png",
-										date: "Feb 15, 2024",
-										title: "How to Select the Right Transformer for Industrial Applications",
-										content: "Choosing the right transformer for your industrial application is crucial for operational efficiency and reliability. Learn about key factors to consider including capacity, voltage requirements, and environmental conditions.",
-										path: "/blog/blogThree"
-									},
-									{
-										image: "images/home/blog-4.1.png",
-										date: "Feb 20, 2024",
-										title: "Best Practices for Transformer Maintenance",
-										content: "Regular maintenance is essential for transformer longevity and performance. Discover comprehensive maintenance strategies, preventive measures, and testing procedures to ensure optimal transformer operation.",
-										path: "/blog/blogFour"
-									},
-									{
-										image: "images/home/blog-5.1.png",
-										date: "Feb 25, 2024",
-										title: "Understanding Furnace Transformers: Applications and Benefits",
-										content: "Furnace transformers are specialized units designed for high-temperature industrial processes. Learn about their unique features, applications in metal processing, and advantages for heavy industrial use.",
-										path: "/blog/blogFive"
-									},
-									{
-										image: "images/home/blog-6.1.png",
-										date: "Mar 01, 2024",
-										title: "Energy Efficiency in Modern Transformers",
-										content: "Explore the latest innovations in transformer technology that are helping industries reduce energy losses and improve operational efficiency. Discover how modern transformers contribute to sustainability goals.",
-										path: "/blog/blogSix"
-									},
-									{
-										image: "images/home/blog-7.1.png",
-										date: "Mar 05, 2024",
-										title: "Custom Transformer Solutions for Specific Industries",
-										content: "Every industry has unique power requirements. Learn how customized transformer solutions can address specific challenges in different sectors, from manufacturing to renewable energy.",
-										path: "/blog/blogSeven"
-									}
-								]; %>
+		<div class="blog-inner-page section-spacing pt-5 pb-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-9 col-lg-8 col-12 our-blog">
+						<div class="post-wrapper">
+							<% const blogsPerPage=4; %>
+								<% const totalBlogs=[ { image: "images/home/blog-1.1.png" , date: "Feb 06, 2024" ,
+									title: "kVA Process Transformers Pvt. Ltd.: Leading Transformer Manufacturer in India"
+									,
+									content: "kVA Process Transformers Pvt. Ltd. is a leading transformer manufacturing company in India, specializing in high-efficiency and low-loss transformers. With state-of-the-art facilities and decades of expertise, we deliver innovative solutions for diverse industrial needs."
+									, path: "/blog/blogOne" }, { image: "images/home/blog-2.1.png" ,
+									date: "Feb 10, 2024" ,
+									title: "The Future of Smart Transformers in India's Power Sector" ,
+									content: "India's energy sector is undergoing a significant transformation, driven by the increasing demand for electricity and the integration of renewable energy sources. Smart transformers are playing a crucial role in this evolution."
+									, path: "/blog/blogTow" }, { image: "images/home/blog-3.1.png" ,
+									date: "Feb 15, 2024" ,
+									title: "How to Select the Right Transformer for Industrial Applications" ,
+									content: "Choosing the right transformer for your industrial application is crucial for operational efficiency and reliability. Learn about key factors to consider including capacity, voltage requirements, and environmental conditions."
+									, path: "/blog/blogThree" }, { image: "images/home/blog-4.1.png" ,
+									date: "Feb 20, 2024" , title: "Best Practices for Transformer Maintenance" ,
+									content: "Regular maintenance is essential for transformer longevity and performance. Discover comprehensive maintenance strategies, preventive measures, and testing procedures to ensure optimal transformer operation."
+									, path: "/blog/blogFour" }, { image: "images/home/blog-5.1.png" ,
+									date: "Feb 25, 2024" ,
+									title: "Understanding Furnace Transformers: Applications and Benefits" ,
+									content: "Furnace transformers are specialized units designed for high-temperature industrial processes. Learn about their unique features, applications in metal processing, and advantages for heavy industrial use."
+									, path: "/blog/blogFive" }, { image: "images/home/blog-6.1.png" ,
+									date: "Mar 01, 2024" , title: "Energy Efficiency in Modern Transformers" ,
+									content: "Explore the latest innovations in transformer technology that are helping industries reduce energy losses and improve operational efficiency. Discover how modern transformers contribute to sustainability goals."
+									, path: "/blog/blogSix" }, { image: "images/home/blog-7.1.png" ,
+									date: "Mar 05, 2024" , title: "Custom Transformer Solutions for Specific Industries"
+									,
+									content: "Every industry has unique power requirements. Learn how customized transformer solutions can address specific challenges in different sectors, from manufacturing to renewable energy."
+									, path: "/blog/blogSeven" } ]; %>
 
-								<!-- Modal for displaying full image -->
-								<div id="imageModal" class="modal" style="display:none;">
-									<span class="close" onclick="closeModal()">&times;</span>
-									<img class="modal-content" id="modalImage">
-								</div>
-
-								<style>
-									.modal {
-										display: none; /* Hidden by default */
-										position: fixed; /* Stay in place */
-										z-index: 1000; /* Sit on top */
-										left: 0;
-										top: 0;
-										width: 100%; /* Full width */
-										height: 100%; /* Full height */
-										overflow: auto; /* Enable scroll if needed */
-										background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
-										backdrop-filter: blur(5px); /* Blur effect */
-									}
-
-									.modal-content {
-										margin: auto;
-										display: block;
-										max-width: 90%; /* Responsive width */
-										max-height: 90%; /* Responsive height */
-										position: relative; /* Position relative for centering */
-										top: 60%; /* Center vertically */
-										transform: translateY(-50%); /* Adjust for vertical centering */
-									}
-
-									.close {
-										position: absolute;
-										top: 90px;
-										right: 30px;
-										color: white;
-										font-size: 40px;
-										font-weight: bold;
-										cursor: pointer;
-									}
-
-									.close:hover,
-									.close:focus {
-										color: #bbb;
-										text-decoration: none;
-										cursor: pointer;
-									}
-
-									.image-box img {
-										display: none; /* Hide images in blog items */
-									}
-								</style>
-
-								<% totalBlogs.forEach((blog, index) => { %>
-									<div class="single-blog blog-item" data-page="<%= Math.floor(index/blogsPerPage) + 1 %>" 
-										 style="display: <%= Math.floor(index/blogsPerPage) + 1 === 1 ? 'block' : 'none' %>">
-										<div class="image-box">
-											<img src="<%= blog.image %>" alt="">
-											<div class="overlay"><a href="#" class="date"><%= blog.date %></a></div>
-										</div>
-										<div class="post-meta">
-											<h5 class="title" style="cursor: pointer;">
-												<a href="<%= blog.path %>"><%= blog.title %></a>
-											</h5>
-											<p><%= blog.content %></p>
-											<a href="<%= blog.path %>" class="read-more">READ MORE</a>
-										</div>
+									<!-- Modal for displaying full image -->
+									<div id="imageModal" class="modal" style="display:none;">
+										<span class="close" onclick="closeModal()">&times;</span>
+										<img class="modal-content" id="modalImage">
 									</div>
-								<% }); %>
-							</div>
 
-							<div class="theme-pagination">
-								<ul>
-									<li class="active" data-page="1"><a href="javascript:void(0)">1</a></li>
-									<li data-page="2"><a href="javascript:void(0)">2</a></li>
-								</ul>
-							</div>
+									<style>
+										.modal {
+											display: none;
+											/* Hidden by default */
+											position: fixed;
+											/* Stay in place */
+											z-index: 1000;
+											/* Sit on top */
+											left: 0;
+											top: 0;
+											width: 100%;
+											/* Full width */
+											height: 100%;
+											/* Full height */
+											overflow: auto;
+											/* Enable scroll if needed */
+											background-color: rgba(0, 0, 0, 0.8);
+											/* Black background with opacity */
+											backdrop-filter: blur(5px);
+											/* Blur effect */
+										}
+
+										.modal-content {
+											margin: auto;
+											display: block;
+											max-width: 90%;
+											/* Responsive width */
+											max-height: 90%;
+											/* Responsive height */
+											position: relative;
+											/* Position relative for centering */
+											top: 60%;
+											/* Center vertically */
+											transform: translateY(-50%);
+											/* Adjust for vertical centering */
+										}
+
+										.close {
+											position: absolute;
+											top: 90px;
+											right: 30px;
+											color: white;
+											font-size: 40px;
+											font-weight: bold;
+											cursor: pointer;
+										}
+
+										.close:hover,
+										.close:focus {
+											color: #bbb;
+											text-decoration: none;
+											cursor: pointer;
+										}
+
+										.image-box img {
+											display: none;
+											/* Hide images in blog items */
+										}
+									</style>
+
+									<% totalBlogs.forEach((blog, index)=> { %>
+										<div class="single-blog blog-item"
+											data-page="<%= Math.floor(index/blogsPerPage) + 1 %>"
+											style="display: <%= Math.floor(index/blogsPerPage) + 1 === 1 ? 'block' : 'none' %>">
+											<div class="image-box">
+												<img src="<%= blog.image %>" alt="">
+												<div class="overlay"><a href="#" class="date">
+														<%= blog.date %>
+													</a></div>
+											</div>
+											<div class="post-meta">
+												<h5 class="title" style="cursor: pointer;">
+													<a href="<%= blog.path %>">
+														<%= blog.title %>
+													</a>
+												</h5>
+												<p>
+													<%= blog.content %>
+												</p>
+												<a href="<%= blog.path %>" class="read-more">READ MORE</a>
+											</div>
+										</div>
+										<% }); %>
 						</div>
-						<!-- ===================== Blog Sidebar ==================== -->
 
-                        <%- include('partials/mainSidebar'); -%>
+						<div class="theme-pagination">
+							<ul>
+								<li class="active" data-page="1"><a href="javascript:void(0)">1</a></li>
+								<li data-page="2"><a href="javascript:void(0)">2</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- ===================== Blog Sidebar ==================== -->
 
-					</div> <!-- /.row -->
-				</div> <!-- /.container -->
-			</div> <!-- /.blog-inner-page -->
-			
+					<%- include('partials/mainSidebar'); -%>
+
+				</div> <!-- /.row -->
+			</div> <!-- /.container -->
+		</div> <!-- /.blog-inner-page -->
 
 
 
-        <%- include('partials/footer'); -%>
 
-		
-		<!-- Add this JavaScript before the closing body tag -->
-		<script>
-			document.addEventListener('DOMContentLoaded', function() {
-				// Get all pagination items
-				const paginationItems = document.querySelectorAll('.theme-pagination li');
-				
-				paginationItems.forEach(item => {
-					item.addEventListener('click', function() {
-						// Remove active class from all items
-						paginationItems.forEach(i => i.classList.remove('active'));
-						
-						// Add active class to clicked item
-						this.classList.add('active');
-						
-						// Get the page number
-						const pageNumber = this.getAttribute('data-page');
-						
-						// Show/hide blog items based on page number
-						document.querySelectorAll('.blog-item').forEach(blog => {
-							if (blog.getAttribute('data-page') === pageNumber) {
-								blog.style.display = 'block';
-							} else {
-								blog.style.display = 'none';
-							}
+		<%- include('partials/footer'); -%>
+
+
+			<!-- Add this JavaScript before the closing body tag -->
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+					// Get all pagination items
+					const paginationItems = document.querySelectorAll('.theme-pagination li');
+
+					paginationItems.forEach(item => {
+						item.addEventListener('click', function () {
+							// Remove active class from all items
+							paginationItems.forEach(i => i.classList.remove('active'));
+
+							// Add active class to clicked item
+							this.classList.add('active');
+
+							// Get the page number
+							const pageNumber = this.getAttribute('data-page');
+
+							// Show/hide blog items based on page number
+							document.querySelectorAll('.blog-item').forEach(blog => {
+								if (blog.getAttribute('data-page') === pageNumber) {
+									blog.style.display = 'block';
+								} else {
+									blog.style.display = 'none';
+								}
+							});
 						});
 					});
 				});
-			});
-		</script>
-		
+			</script>

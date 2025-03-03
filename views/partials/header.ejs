@@ -1,35 +1,37 @@
-		<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-		<link rel="manifest" href="/images/favicon/site.webmanifest">		
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/site.webmanifest">
 
-		<meta charset="UTF-8">
-		<!-- For IE -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<!-- For Resposive Device -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- For Window Tab Color -->
-		<!-- Chrome, Firefox OS and Opera -->
-		<meta name="theme-color" content="#061948">
-		<!-- Windows Phone -->
-		<meta name="msapplication-navbutton-color" content="#061948">
-		<!-- iOS Safari -->
-		<meta name="apple-mobile-web-app-status-bar-style" content="#061948">
-		<!-- Main style sheet -->
-		<link rel="stylesheet" type="text/css" href="/css/style.css">
-		<!-- responsive style sheet -->
-		<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+<meta charset="UTF-8">
+<!-- For IE -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- For Resposive Device -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- For Window Tab Color -->
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#061948">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#061948">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#061948">
+<!-- Main style sheet -->
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<!-- responsive style sheet -->
+<link rel="stylesheet" type="text/css" href="/css/responsive.css">
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+	integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-		<!-- Fix Internet Explorer ______________________________________-->
-		<!--[if lt IE 9]>
+<!-- Fix Internet Explorer ______________________________________-->
+<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 			<script src="vendor/html5shiv.js"></script>
 			<script src="vendor/respond.js"></script>
 		<![endif]-->
-		
-		<script type="application/ld+json">
+
+<script type="application/ld+json">
 			{
 			  "@context": "https://schema.org",
 			  "@type": "Organization",
@@ -52,242 +54,339 @@
 			  }
 			}
 			</script>
-			
-	<style>
-	  /* Update the existing style block with these rules */
-	  .header-one {
-	    position: relative;
-	    z-index: 10000;
-	  }
 
-	  .theme-menu-wrapper {
-	    position: relative;
-	    z-index: 9999;
-	  }
+<style>
+	/* Update the existing style block with these rules */
+	.header-one {
+		position: relative;
+		z-index: 10000;
+	}
 
-	  #mega-menu-holder {
-	    position: relative;
-	    z-index: 9999;
-	    
-	  }
+	.theme-menu-wrapper {
+		position: relative;
+		z-index: 9999;
+	}
 
-	  
+	#mega-menu-holder {
+		position: relative;
+		z-index: 9999;
 
-	  #mega-menu-holder ul.dropdown {
-	    z-index: 9999;
-	  }
+	}
 
-	  #theme-main-banner {
-	    position: relative;
-	    z-index: 1;
-	  }
 
-	  /* Ensure dropdown is visible */
-	  #mega-menu-holder ul li ul.dropdown {
-	    position: absolute;
-	    background: white;
-	    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
-	  }
 
-	  /* Add specific z-index for the entire header wrapper */
-	  .main-page-wrapper > header {
-	    position: relative;
-	    z-index: 100000 !important;
-	    isolation: isolate;
-	  }
+	#mega-menu-holder ul.dropdown {
+		z-index: 9999;
+	}
 
-	  #mega-menu-holder ul li {
-	    position: relative;
-	  }
+	#theme-main-banner {
+		position: relative;
+		z-index: 1;
+	}
 
-	  #mega-menu-holder ul li ul.dropdown {
-	    z-index: 100001 !important;
-	    position: absolute;
-	    background: white;
-	    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
-	  }
 
-	  #theme-main-banner {
-	    position: relative;
-	    z-index: 1 !important;
-	    transform: translateZ(0);
-	  }
+	/* Ensure dropdown is visible */
+	#mega-menu-holder ul li ul.dropdown {
+		position: absolute;
+		background: white;
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+	}
 
-	  /* Add these new styles for mobile menu */
-	  @media (max-width: 991px) {
-	    #mega-menu-holder {
-	      position: fixed;
-	      top: 0;
-	      left: 0;
-	      width: 100%;
-	      height: 100vh;
-	      /* background: white; */
-	      z-index: 100002;
-	      padding: 20px;
-	      overflow-y: auto;
-		  transition: transform 0.3s ease;
-	    transform: translateX(-100%);
-	    display: none;
-	    }
+	/* Add specific z-index for the entire header wrapper */
+	.main-page-wrapper>header {
+		position: relative;
+		z-index: 100000 !important;
+		isolation: isolate;
+	}
+
+	#mega-menu-holder ul li {
+		position: relative;
+	}
+
+	#mega-menu-holder ul li ul.dropdown {
+		z-index: 100001 !important;
+		position: absolute;
+		background: white;
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+	}
+
+	#theme-main-banner {
+		position: relative;
+		z-index: 1 !important;
+		transform: translateZ(0);
+	}
+
+	/* Add these new styles for mobile menu */
+	@media (max-width: 991px) {
+		#mega-menu-holder {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			/* background: white; */
+			z-index: 100002;
+			padding: 20px;
+			overflow-y: auto;
+			transition: transform 0.3s ease;
+			transform: translateX(-100%);
+			display: none;
+		}
+
 		#mega-menu-holder.show {
-	    transform: translateX(0);
-	    display: block;
-	  }
+			transform: translateX(0);
+			display: block;
+		}
 
-	    #mega-menu-holder ul.clearfix {
-	      margin-top: 20px;
-		  text-align: center;
-	    }
+		#mega-menu-holder ul.clearfix {
+			margin-top: 20px;
+			text-align: center;
+		}
 
-	    #mega-menu-holder ul.clearfix > li {
-	      display: block;
-	      /* margin: 15px 0; */
-	    }
+		#mega-menu-holder ul.clearfix>li {
+			display: block;
+			/* margin: 15px 0; */
+		}
 
-	    .mobile-menu-toggle {
-	      position: relative;
-	      /* z-index: 100003; */
-	    }
+		.mobile-menu-toggle {
+			position: relative;
+			/* z-index: 100003; */
+		}
+		#mega-menu-holder ul.dropdown li a{
+			padding: 0 15px;
+		}
 
-	    /* Style for dropdown in mobile view */
-	    #mega-menu-holder ul li ul.dropdown {
-	      position: static;
-	      box-shadow: none;
-	      padding-left: 20px;
-	    }
+		/* Style for dropdown in mobile view */
+		#mega-menu-holder ul li ul.dropdown {
+			/* display: none; */
+			position: static;
+			box-shadow: none;
+			padding-left: 20px;
+			background: transparent;
+		}
 
-	    /* Add styles for close button */
-	    .mobile-menu-close {
-	      position: absolute;
-	      top: 20px;
-	      right: 20px;
-	      background: none;
-	      border: none;
-	      font-size: 24px;
-	      color: #ffffff;
-	      cursor: pointer;
-	      z-index: 100004;
-	      display: none;
-	    }
+		/* Add styles for close button */
+		.mobile-menu-close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			background: none;
+			border: none;
+			font-size: 24px;
+			color: #ffffff;
+			cursor: pointer;
+			z-index: 100004;
+			display: none;
+		}
 
-	    #mega-menu-holder.show .mobile-menu-close {
-	      display: block;
-	    }
-	  }
-	</style>
-			
-	</head>
+		#mega-menu-holder.show .mobile-menu-close {
+			display: block;
+		}
+	}
 
-	<body>
-		<div class="main-page-wrapper">
+	/* Add these new styles for floating action buttons */
+	.floating-buttons {
+		position: fixed;
+		bottom: 25px;
+		right: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		z-index: 99999;
+	}
 
-			<!-- ===================================================
+	.floating-button {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+		transition: transform 0.3s ease;
+	}
+
+	.floating-button:hover {
+		transform: scale(1.1);
+	}
+
+	.whatsapp-btn {
+		background-color: #25D366;
+		color: white;
+	}
+
+	.call-btn {
+		background-color: #0088cc;
+		color: white;
+	}
+
+	.floating-button i {
+		font-size: 30px;
+	}
+</style>
+
+</head>
+
+<body>
+	<div class="main-page-wrapper">
+
+		<!-- ===================================================
 				Loading Transition
 			==================================================== -->
-			<!-- <div id="loader-wrapper">
+		<!-- <div id="loader-wrapper">
 				<div id="loader"></div>
 			</div> -->
-			
 
-			<!-- 
+
+		<!-- 
 			=============================================
 				Theme Header One
 			============================================== 
 			-->
-			<header class="header-one">
-				<div class="top-header">
-					<div class="container headercontainer" style="display: flex; justify-content: space-between; align-items: center;">
-						<div class="address-wrapper  comlogos" style="display: inline-grid; grid-template-columns: auto auto; align-items: center; gap: 15px;">
-							<div class="comlogos-img-1"><img src="/images/logo/ISI-Mark-logo.png" width="70px" alt=""></div>
-							<div class="comlogos-img-2" style="display: flex; justify-content: center;"><img src="/images/logo/ERDA.png" width="54px" alt=""></div>
-							<div class="comlogos-img-3"><img src="/images/logo/Iso-logo.png" width="70px" alt=""></div>
-							<div class="comlogos-img-4"><img src="/images/logo/IAF-Logo.png" width="90px" alt=""></div>
-						</div> <!-- /.address-wrapper -->
+		<header class="header-one">
+			<div class="top-header">
+				<div class="container headercontainer"
+					style="display: flex; justify-content: space-between; align-items: center;">
+					<div class="address-wrapper  comlogos"
+						style="display: inline-grid; grid-template-columns: auto auto; align-items: center; gap: 15px;">
+						<div class="comlogos-img-1"><img src="/images/logo/ISI-Mark-logo.png" width="70px" alt=""></div>
+						<div class="comlogos-img-2" style="display: flex; justify-content: center;"><img
+								src="/images/logo/ERDA.png" width="54px" alt=""></div>
+						<div class="comlogos-img-3"><img src="/images/logo/Iso-logo.png" width="70px" alt=""></div>
+						<div class="comlogos-img-4"><img src="/images/logo/IAF-Logo.png" width="90px" alt=""></div>
+					</div> <!-- /.address-wrapper -->
 
-						<div class="logo text-center" style="padding-top: 30px;"><a href="/"><img src="/images/logo/kva-website-logo.png" width="270px" alt="kVA Process Transformer Logo"></a></div>
+					<div class="logo text-center" style="padding-top: 30px;"><a href="/"><img
+								src="/images/logo/kva-website-logo.png" width="270px"
+								alt="kVA Process Transformer Logo"></a></div>
 
-						<div class="address-wrapper">
-							<ul>
-								<li class="address">
-									<!-- <i class="icon fa-solid fa-envelope"></i> -->
-									<i class="icon fa-solid fa-phone"></i>
-									<p style="font-weight: 600; font-size: 25px;">+91 98318 23173</p>
-									<p style="font-weight: 600; font-size: 25px;">+91 98302 52113</p>
-								</li>
-								<!-- <li class="quotes"><a href="/contact">CONTACT</a></li> -->
-							</ul>
-						</div> <!-- /.address-wrapper -->
-					</div> <!-- /.container -->
-				</div> <!-- /.top-header -->
+					<div class="address-wrapper">
+						<ul>
+							<li class="address">
+								<!-- <i class="icon fa-solid fa-envelope"></i> -->
+								<i class="icon fa-solid fa-phone"></i>
+								<p style="font-weight: 600; font-size: 25px;">+91 98318 23173</p>
+								<p style="font-weight: 600; font-size: 25px;">+91 98302 52113</p>
+							</li>
+							<!-- <li class="quotes"><a href="/contact">CONTACT</a></li> -->
+						</ul>
+					</div> <!-- /.address-wrapper -->
+				</div> <!-- /.container -->
+			</div> <!-- /.top-header -->
 
-				<div class="theme-menu-wrapper">
-					<div class="container">
-						<div class="bg-wrapper clearfix">
-							<!-- ============== Menu Warpper ================ -->
-					   		<div class="menu-wrapper float-left">
-					   			<button class="mobile-menu-toggle d-lg-none">
-					   				<i class="fa-solid fa-bars"></i>
-					   			</button>
-					   			<nav id="mega-menu-holder" class="clearfix">
-								   <button class="mobile-menu-close">
-								   	<i class="fa-solid fa-xmark"></i>
-								   </button>
-								   <ul class="clearfix">
-									    <li <% if (page_name === 'home') { %>class="active" <% } %>><a href="/">Home</a>
-									    </li>
-										<li <% if (page_name === 'about') { %>class="active" <% } %> ><a href="/about">About</a></li>
-										<li <% if (page_name === 'process') { %>class="active" <% } %> ><a href="/manufacturing-process">Manufacturing Process</a></li>
-									    <li <% if (page_name.split(' ')[0] === 'product') { %>class="active" <% } %>><a href="#">Products</a>
-									    	<ul class="dropdown">
-									    		<li><a href="/products/sub-merged-arc-furnace-transformers">Submerged Arc Furnace Transformers</a></li>
-									    		<li><a href="/products/lrf-transformer">LRF Transformer</a></li>
-									    		<li><a href="/products/induction-melting-furnace-transformers">Induction Melting Furnace Transformers</a></li>
-									    		<li><a href="/products/power-transformers">Power Transformers</a></li>
-									    		<li><a href="/products/dry-type-transformers">Dry Type Transformers</a></li>
-									    		<li><a href="/products/oltc-fitted-transformer-asvr">OLTC Fitted Transformer ASVR</a></li>
-									    		<li><a href="/products/distribution-transformers">Distribution Transformers</a></li>
-									    		<li><a href="/products/solar-transformer">Solar Transformer</a></li>
-												<li><a href="/products/earthing-transformers">Earthing Transformers</a></li>
+			<div class="theme-menu-wrapper">
+				<div class="container">
+					<div class="bg-wrapper clearfix">
+						<!-- ============== Menu Warpper ================ -->
+						<div class="menu-wrapper float-left">
+							<button class="mobile-menu-toggle d-lg-none">
+								<i class="fa-solid fa-bars"></i>
+							</button>
+							<nav id="mega-menu-holder" class="clearfix">
+								<button class="mobile-menu-close">
+									<i class="fa-solid fa-xmark"></i>
+								</button>
+								<ul class="clearfix">
+									<li <% if (page_name==='home' ) { %>class="active" <% } %>><a href="/">Home</a>
+									</li>
+									<li <% if (page_name==='about' ) { %>class="active" <% } %> ><a
+												href="/about">About</a></li>
+									<li <% if (page_name==='process' ) { %>class="active" <% } %> ><a
+												href="/manufacturing-process">Manufacturing Process</a></li>
+									<li <% if (page_name.split(' ')[0] === ' product') { %>class="active" <% } %>><a
+												href="#">Products</a>
+											<ul class="dropdown" >
+												<li><a href="/products/sub-merged-arc-furnace-transformers">Submerged
+														Arc Furnace Transformers</a></li>
+												<li><a href="/products/lrf-transformer">LRF Transformer</a></li>
+												<li><a href="/products/induction-melting-furnace-transformers">Induction
+														Melting Furnace Transformers</a></li>
+												<li><a href="/products/Rectifier-transformer">Rectifier
+														/ Converter Duty Transformers</a></li>
+												<li><a href="/products/power-transformers">Power Transformers</a></li>
+												<li><a href="/products/Auxiliary-transformers">Auxiliary Transformers
+													</a>
+												</li>
+												<li><a href="/products/dry-type-transformers">Dry Type Transformers</a>
+												</li>
+												<li><a href="/products/oltc-fitted-transformer-asvr">OLTC Fitted
+														Transformer ASVR</a></li>
+												<li><a href="/products/distribution-transformers">Distribution
+														Transformers</a></li>
+												<li><a href="/products/solar-transformer">Solar Transformer</a></li>
+												<li><a href="/products/earthing-transformers">Earthing Transformers</a>
+												</li>
 												<li><a href="/products/lt-panel-board">LT Panel Board</a></li>
-									       </ul>
-									    </li>
-										<li <% if (page_name === 'clients') { %>class="active" <% } %> ><a href="/clients">Clients</a></li>
-									    <li <% if (page_name === 'gallery') { %>class="active" <% } %> ><a href="/gallery">Gallery</a></li>
-									    <li <% if (page_name === 'blog') { %>class="active" <% } %> ><a href="/blog">Blog</a></li>
-									    <li <% if (page_name === 'contact') { %>class="active" <% } %> ><a href="/contact">Contact Us</a></li>
-								   </ul>
-								</nav> <!-- /#mega-menu-holder -->
-					   		</div> <!-- /.menu-wrapper -->
+											</ul>
+									</li>
+									<li <% if (page_name==='clients' ) { %>class="active" <% } %> ><a
+												href="/clients">Clients</a></li>
+									<li <% if (page_name==='gallery' ) { %>class="active" <% } %> ><a
+												href="/gallery">Gallery</a></li>
+									<li <% if (page_name==='blog' ) { %>class="active" <% } %> ><a href="/blog">Blog</a>
+									</li>
+									<li <% if (page_name==='contact' ) { %>class="active" <% } %> ><a
+												href="/contact">Contact Us</a></li>
+								</ul>
+							</nav> <!-- /#mega-menu-holder -->
+						</div> <!-- /.menu-wrapper -->
 
-					   		<div class="right-widget float-right">
-					   			<ul>
-					   				<li class="social-icon">
-					   					<ul>
-											<li><a href="https://www.facebook.com/kvaprocesstransformer"><i class="fa-brands fa-facebook"></i></a></li>
-											<li><a href="https://twitter.com/kvatransformer"><i class="fa-brands fa-twitter"></i></a></li>
-											<li><a href="https://www.instagram.com/kva_process_transformers/"><i class="fa-brands fa-instagram"></i></a></li>
-											<li><a href="https://www.linkedin.com/company/kva-process-transformers/"><i class="fa-brands fa-linkedin"></i></a></li>
-										</ul>
-					   				</li>
-					   			</ul>
-					   		</div> <!-- /.right-widget -->
-						</div> <!-- /.bg-wrapper -->
-					</div> <!-- /.container -->
-				</div> <!-- /.theme-menu-wrapper -->
-			</header> <!-- /.header-one -->
+						<div class="right-widget float-right">
+							<ul>
+								<li class="social-icon">
+									<ul>
+										<li><a href="https://www.facebook.com/kvaprocesstransformer"><i
+													class="fa-brands fa-facebook"></i></a></li>
+										<li><a href="https://twitter.com/kvatransformer"><i
+													class="fa-brands fa-twitter"></i></a></li>
+										<li><a href="https://www.instagram.com/kva_process_transformers/"><i
+													class="fa-brands fa-instagram"></i></a></li>
+										<li><a href="https://www.linkedin.com/company/kva-process-transformers/"><i
+													class="fa-brands fa-linkedin"></i></a></li>
+									</ul>
+								</li>
+							</ul>
+						</div> <!-- /.right-widget -->
+					</div> <!-- /.bg-wrapper -->
+				</div> <!-- /.container -->
+			</div> <!-- /.theme-menu-wrapper -->
+		</header> <!-- /.header-one -->
 
-			<!-- Add this before closing body tag -->
-			<script>
-			document.addEventListener('DOMContentLoaded', function() {
+		<!-- Add this before closing body tag -->
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
 				const menuToggle = document.querySelector('.mobile-menu-toggle');
 				const menuHolder = document.querySelector('#mega-menu-holder');
 				const closeButton = document.querySelector('.mobile-menu-close');
-				
+
+				// Add dropdown handling
+				const dropdownParents = document.querySelectorAll('#mega-menu-holder ul li:has(ul.dropdown)');
+
+				dropdownParents.forEach(parent => {
+					const link = parent.querySelector('a');
+					let isOpen = false;
+
+					link.addEventListener('click', function (e) {
+						if (window.innerWidth < 992) {
+							e.preventDefault();
+							const dropdown = parent.querySelector('ul.dropdown');
+							isOpen = !isOpen;
+
+							if (isOpen) {
+								dropdown.style.display = 'block';
+							} else {
+								dropdown.style.display = 'none';
+							}
+						}
+					});
+				});
+
 				// Add initial display style for mobile
 				if (window.innerWidth < 992) {
 					menuHolder.style.display = 'none';
 				}
-				
+
 				function closeMenu() {
 					menuHolder.classList.remove('show');
 					document.body.style.overflow = '';
@@ -295,8 +394,8 @@
 					icon.classList.remove('fa-xmark');
 					icon.classList.add('fa-bars');
 				}
-				
-				menuToggle.addEventListener('click', function(e) {
+
+				menuToggle.addEventListener('click', function (e) {
 					e.stopPropagation();
 					const isMenuVisible = menuHolder.classList.contains('show');
 					if (isMenuVisible) {
@@ -305,20 +404,20 @@
 						menuHolder.style.display = 'block';
 						menuHolder.classList.add('show');
 						document.body.style.overflow = 'hidden';
-						
+
 						const icon = this.querySelector('i');
 						icon.classList.toggle('fa-bars');
 						icon.classList.toggle('fa-xmark');
 					}
 				});
-				
-				closeButton.addEventListener('click', function(e) {
+
+				closeButton.addEventListener('click', function (e) {
 					e.stopPropagation();
 					closeMenu();
 				});
-				
+
 				// Close menu when clicking outside
-				document.addEventListener('click', function(e) {
+				document.addEventListener('click', function (e) {
 					if (!menuHolder.contains(e.target) && !menuToggle.contains(e.target)) {
 						if (window.innerWidth < 992 && menuHolder.classList.contains('show')) {
 							closeMenu();
@@ -327,7 +426,7 @@
 				});
 
 				// Handle window resize
-				window.addEventListener('resize', function() {
+				window.addEventListener('resize', function () {
 					if (window.innerWidth >= 992) {
 						menuHolder.style.display = 'block';
 						document.body.style.overflow = '';
@@ -337,7 +436,16 @@
 					}
 				});
 			});
-			</script>
-		</div>
-	</body>
+		</script>
+	</div>
+	<div class="floating-buttons">
+		<a href="tel:+919831823173" class="floating-button call-btn">
+			<i class="fa-solid fa-phone"></i>
+		</a>
+		<a href="https://wa.me/919831823173" target="_blank" class="floating-button whatsapp-btn">
+			<i class="fa-brands fa-whatsapp"></i>
+		</a>
+	</div>
+</body>
+
 </html>
